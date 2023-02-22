@@ -1,0 +1,135 @@
+.h {
+  &-container {
+    padding: 1rem;
+    background-color: $grey;
+    margin-top: 7.2rem;
+    min-height: calc(100vh - 7.2rem);
+  }
+
+  &-card {
+    margin: 1rem;
+    width: calc(100% - 1rem - 1rem);
+    height: 12rem;
+    position: relative;
+    background-color: $white;
+    box-shadow: 0 0 0.5px 0 rgb(0 0 0 / 14%), 0 1px 1px 0 rgb(0 0 0 / 24%);
+    border-radius: 1.2rem;
+
+    &:first-child {
+      margin: 1rem 1rem;
+    }
+
+    &:last-child {
+      margin-bottom: 1rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .c {
+        &-icon {
+          &-container {
+            background-color: $orange;
+            -webkit-transition: all 200ms ease;
+            -ms-transition: all 200ms ease;
+            transition: all 200ms ease;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ls {
+  &-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.c {
+  &-title {
+    position: absolute;
+    bottom: 1rem;
+    margin: 0 1.5rem;
+    padding-top: .7rem;
+    display: flex;
+    align-items: center;
+    font-weight: 900;
+    color: $black;
+    font-size: 1.5rem;
+    width: calc(100% - 3rem);
+    border-top: .1rem solid rgba(0,0,0,.1);
+  }
+
+  &-icon {
+    height: 3.5rem;
+    width: 3.5rem;
+
+    & path {
+      fill: $white;
+    }
+
+    &-container {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $orangeLight;
+      height: 6rem;
+      width: 6rem;
+      border-radius: 1.2rem;
+      right: 1.5rem;
+      top: 1.5rem;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .h {
+    &-container {
+      padding: 4rem;
+      margin-top: 10rem;
+      width: 100%;
+      min-height: calc(100vh - 10rem);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &-card {
+      height: 20rem;
+
+      &:last-child {
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  .ls {
+    &-container {
+      display: block;
+      width: calc(25%);
+    }
+  }
+
+  .c {
+    &-title {
+      font-size: 3rem;
+      margin: 0 2rem;
+    }
+
+    &-icon {
+      height: 6rem;
+      width: 6rem;
+
+      &-container {
+        height: 10rem;
+        width: 10rem;
+        right: 2rem;
+        top: 2rem;
+      }
+    }
+  }
+}

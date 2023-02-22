@@ -1,0 +1,31 @@
+.h {
+  display: flex;
+  align-items: center;
+  padding: 0 1.6rem;
+  height: 7.2rem;
+  box-shadow: 0 .1rem .3rem rgb(0 0 0 / 10%), 0 .2rem .2rem rgb(0 0 0 / 6%), 0 0 .2rem rgb(0 0 0 / 7%);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: $white;
+  z-index: 1000;
+
+  &-name {
+    display: block;
+    font-family: Pacifico, sans-serif;
+    color: $orange;
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .h {
+    padding: 0 4rem;
+    height: 10rem;
+
+    &-name {
+      font-size: 3rem;
+    }
+  }
+}
